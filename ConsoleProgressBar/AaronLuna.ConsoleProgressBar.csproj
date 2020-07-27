@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,11 +10,5 @@
 
   <ItemGroup>
     <None Remove="ConsoleProgressBar.dt" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="AaronLuna.Common">
-      <HintPath>..\ExternalReferences\AaronLuna.Common.dll</HintPath>
-    </Reference>
   </ItemGroup>
 </Project>

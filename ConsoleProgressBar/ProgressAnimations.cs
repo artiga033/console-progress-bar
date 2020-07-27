@@ -3,7 +3,6 @@
     using System;
     using System.Linq;
 
-    using Microsoft.VisualBasic;
 
     public static class ProgressAnimations
     {
@@ -17,6 +16,7 @@
         public const string Circles = "\u25cb\u263c\u00a4\u2219";
 
         // These characters render correctly only on Mac
+        // Seem to work on Windows with a proper font.
         public const string RotatingDot = "\u25dc\u25dd\u25de\u25df";
         public const string GrowingBarVertical = "\u2581\u2582\u2583\u2584\u2585\u2586\u2587\u2588\u2587\u2586\u2585\u2584\u2583\u2581";
         public const string RotatingPipe = "\u2524\u2518\u2534\u2514\u251c\u250c\u252c\u2510";
@@ -30,7 +30,7 @@
             foreach(int i in Enumerable.Range(0, 40))
             {
                 var charIndex = rand.Next(10241, 10496);
-                var randChar = Strings.ChrW(charIndex);
+                var randChar = Convert.ToChar(charIndex);
                 sequence +=  randChar;
             }
 
